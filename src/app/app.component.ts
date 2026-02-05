@@ -8,8 +8,8 @@ import { LoginComponent } from './comps/login/login.component';
   
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
- imports: [NaviComponent],
- imports: [LoginComponent]
+ imports: [RouterOutlet, NaviComponent]
+ 
 })
 export class AppComponent {
   title = 'my-app';
