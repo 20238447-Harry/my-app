@@ -1,0 +1,37 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Center horizontally */
+  justify-content: center;   /* Center vertically */
+  min-height: 10vh;          /* So it’s not stuck at the top */
+  gap: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+}
+
+.login-container input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #888888; /* Match navbar button gray */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #555555;
+}

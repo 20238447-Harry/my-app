@@ -6,12 +6,11 @@ import { HomeComponent } from './comps/home/home.component';
 
 @Component({
   selector: 'app-root',
-  
+  standalone: true,
+  imports: [RouterOutlet, NaviComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
- imports: [RouterOutlet, NaviComponent]
- 
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = "my-app";
 }

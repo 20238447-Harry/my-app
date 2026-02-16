@@ -1,6 +1,12 @@
+<h1>{{ appTitle }}</h1>
 
-<h1 [class.highlighted]="isHighlighted">{{ appTitle }}</h1>
+<img [src]="userImageUrl" alt="User Avatar" width="150">
 
-<img [src]="userImageUrl" alt="User Avatar" class="highlighted" width="150">
+<p [class.highlighted]="isHighlighted">
+  This text is highlighted using property binding.
+</p>
 
-<p [class.highlighted]="isHighlighted">Today is: {{ currentDate | date:'fullDate' }}</p>
+<p>
+  Current Date: {{ currentDate | date:'fullDate' }}
+</p>
+
