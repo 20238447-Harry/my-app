@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-interaction.component.css']
 })
 export class UserInteractionComponent {
+
   message: string = 'Click the button!';
   clickCount: number = 0;
 

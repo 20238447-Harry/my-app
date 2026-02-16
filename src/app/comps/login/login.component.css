@@ -1,9 +1,9 @@
 .login-container {
   display: flex;
   flex-direction: column;
-  align-items: center;       /* Center horizontally */
-  justify-content: center;   /* Center vertically */
-  min-height: 10vh;          /* So it’s not stuck at the top */
+  align-items: center;       
+  justify-content: center;   
+  min-height: 10vh;          
   gap: 15px;
   font-family: Arial, sans-serif;
 }
@@ -25,7 +25,7 @@
 .login-container button {
   padding: 10px;
   font-size: 16px;
-  background-color: #888888; /* Match navbar button gray */
+  background-color: #888888; 
   color: white;
   border: none;
   border-radius: 5px;
