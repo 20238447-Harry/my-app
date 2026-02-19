@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { FormsModule } from "@angular/forms";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-grade-calculator',
-  imports: [],
+  imports: [FormsModule, CommonModule],
   templateUrl: 'grade-calculator.component.html',
-  styleUrls: ['./grade-calculator.component.css']
+  styleUrl: './grade-calculator.component.css'
 })
 export class GradeCalculatorComponent {
   studentName: string = "Harry";
