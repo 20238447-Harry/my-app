@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   appTitle: string = 'Welcome to Angular 20';
-  userImageUrl: string = 'assets/images/user-avatar.png';
+  userImageUrl: string = 'https://png.pngtree.com/png-vector/20240723/ourmid/pngtree-cute-cat-cat-kawaii-chibi-drawing-style-cat-cartoon-png-image_12965065.png';
   isHighlighted: boolean = true;
   currentDate: Date = new Date();
 }

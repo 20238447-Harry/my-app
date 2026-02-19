@@ -1,0 +1,51 @@
+
+<div class="container">
+
+  <!-- Interpolation -->
+  <h2>Grade Report for {{ studentName }}</h2>
+
+  <!-- Two-Way Binding -->
+  <label>Student Name:</label>
+  <input type="text" [(ngModel)]="studentName">
+
+  <label>Score:</label>
+  <input type="number" [(ngModel)]="score" (input)="updateStatus()">
+
+  <!-- Event Binding -->
+  <button (click)="toggleHighlight()">Toggle Highlight</button>
+
+  <hr>
+
+  <table [attr.border]="1">
+    <tr>
+      <!-- Attribute Binding -->
+      <th [attr.colspan]="colSpan">Student Grade Details</th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{ studentName }}</td>
+    </tr>
+    <tr>
+      <td>Score</td>
+      <td>{{ score }}</td>
+    </tr>
+    <tr>
+      <td>Letter Grade</td>
+      <td>{{ getLetterGrade() }}</td>
+    </tr>
+  </table>
+
+  <!-- Style Binding -->
+  <p [style.color]="gradeColor">
+    Grade Color Preview
+  </p>
+
+  <!-- Class Binding -->
+  <p 
+    [class.highlight]="isHighlighted"
+    [class.passed]="passing"
+    [class.failed]="!passing">
+    Status: {{ passing ? 'PASSED' : 'FAILED' }}
+  </p>
+
+</div>

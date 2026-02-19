@@ -4,6 +4,66 @@
 
 <div class="container">
     <!-- add a log-in form-->
+<!-- Template (.html) -->
+<h1>{{ title }}</h1> <!-- property access -->
+<p>Score: {{ score }} / 100</p> <!-- property access -->
+<p>Next yr: {{ currentYear + 1 }}</p> <!-- expression -->
+<p>Result: {{ getGrade() }}</p> <!-- method call -->
+<p>{{ score > 90 ? "Excellent!" : "Keep trying" }}</p> <!-- ternary -->
+    
+<button [disabled]="isDisabled">Submit</button>
+<img [src]="imgSrc" [alt]="'Angular Logo'" [width]="70" />
+<input type="number" [max]="inputMax" [placeholder]="'Enter score'" />
+
+<button (click)="onClick()">Clicked {{ count }} times</button>
+<input (keyup)="onKey($event)" placeholder="Press a key" />
+<p>Last key: {{ lastKey }}</p>
+<input (input)="onInput($event)" />
+
+<input [(ngModel)]="studentName" />
+<p>Hello, {{ studentName }}!</p>
+<input type="range" min="0" max="100" [(ngModel)]="scores" />
+<p>Scores: {{ scores }}</p>
+<!-- Two-way is equivalent to: -->
+<input [ngModel]="studentName" (ngModelChange)="studentName = $event" />
+
+<td [attr.colspan]="span">Spans 2 columns</td>
+<button [attr.aria-label]="ariaDesc">Submit</button>
+<div [attr.data-user-id]="userId">User card</div>
+<!-- To conditionally REMOVE an attribute, bind null: -->
+<td [attr.colspan]="isWide ? 2 : null">Cell</td>
+
+
+<!-- Template (.html) — single class binding -->
+<div class="box"
+[class.active]="isActive"
+[class.error]="hasError">
+Status indicator
+</div>
+<!-- [ngClass] with object: key=className, value=boolean -->
+<p [ngClass]="{
+'text-small': size === 'small',
+'text-medium': size === 'medium',
+'text-large': size === 'large'
+}">Resizable text</p>
+
+
+<p [style.color]="fontColor"
+[style.background-color]="bgColor"
+[style.fontSize.px]="fontSize"> <!-- .px auto-appended! -->
+Styled paragraph
+</p>
+<!-- [ngStyle] for setting multiple styles at once -->
+<div [ngStyle]="{
+'color': fontColor,
+'font-size': fontSize + 'px',
+'border': '2px solid ' + fontColor
+}">ngStyle demo</div>
+<!-- UNIT SUFFIX SHORTCUTS -->
+<!-- [style.width.px]="200" → width: 200px -->
+<!-- [style.opacity]="0.75" → opacity: 0.75 (no unit) -->
+<!-- [style.margin.%]="5" → margin: 5% -->
+
     <router-outlet></router-outlet>
 </div>
 
